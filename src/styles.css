@@ -106,3 +106,12 @@ dialog .frame{max-height:92vh;overflow:auto}
 .soon{position:absolute;z-index:3;left:-12%;right:-12%;top:50%;transform:translateY(-50%) rotate(-8deg);background:#0a0a0a;color:#fff;border-block:2px solid #fff;text-align:center;padding:.55rem 0;font-weight:700;letter-spacing:.25em;font-size:1rem}
 .perks{list-style:none;padding:0;margin:0 0 1rem;display:grid;gap:.35rem;font-size:.85rem;opacity:.9}
 .perks li::before{content:"✔ ";}
+
+/* Formulario de comprobante */
+.rcpt{display:grid;gap:.7rem;margin:1rem 0 .6rem}
+.rcpt label{display:grid;gap:.3rem;font-size:.85rem;opacity:.9}
+.rcpt input{background:#0a0a0a;color:#fff;border:1px solid #555;padding:.55rem;font:inherit}
+.rcpt button:disabled{opacity:.6;cursor:wait}
+.rcpt-ok{color:#57f287;margin:1rem 0}
+.rcpt-err{color:#ff6b6b;font-size:.85rem;margin:0}
+

@@ -1,6 +1,7 @@
 import { useEffect, useReducer, useRef, useState } from 'react'
 import { DISCORD, PAYMENTS } from '../data/payments.js'
 import { PLANS, money } from '../data/products.js'
+import ReceiptForm from './ReceiptForm.jsx'
 
 // Máquina de estados: methods → loading → qr   |   methods → link
 const init = { step: 'methods', method: null }
@@ -91,6 +92,7 @@ export default function PaymentModal({ product, plan, onClose }) {
                 </p>
                 <button type="button" className="back2" onClick={() => dispatch({ type: 'back' })}>← Cambiar método</button>
               </div>
+              <ReceiptForm product={product} plan={plan} price={price} method={method} />
               <Discord />
             </>
           )}
@@ -106,6 +108,7 @@ export default function PaymentModal({ product, plan, onClose }) {
                 </a>
                 <button type="button" className="back2" onClick={() => dispatch({ type: 'back' })}>← Cambiar método</button>
               </div>
+              <ReceiptForm product={product} plan={plan} price={price} method={method} />
               <Discord />
             </>
           )}

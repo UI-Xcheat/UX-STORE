@@ -1,4 +1,7 @@
-export const DISCORD = 'https://discord.gg/YOUR_INVITE_LINK'
+export const DISCORD = 'https://discord.gg/y8Vt3p5sw'
+
+// URL del Cloudflare Worker (ver worker/README.md). Vacío = formulario oculto.
+export const RECEIPT_ENDPOINT = ''
 
 // type "qr"   → círculo de carga y luego el QR (archivo en public/qr/)
 // type "link" → ventana con botón que abre la página de pago
