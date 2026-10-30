@@ -7,8 +7,12 @@ function ProductCard({ product, index, onOpen }) {
     e.preventDefault()
     onOpen(product.id)
   }
+  const Tag = product.soon ? 'div' : 'a'
+  const props = product.soon
+    ? { className: 'frame card disabled', 'aria-disabled': true }
+    : { className: 'frame card', href: `#${product.id}`, onClick: open, 'aria-label': `Ver detalles de ${product.name}` }
   return (
-    <a className="frame card" href={`#${product.id}`} onClick={open} aria-label={`Ver detalles de ${product.name}`}>
+    <Tag {...props}>
       <div className="in">
         <Art product={product} index={index}>
           <ul className="quick" aria-hidden="true">
@@ -33,7 +37,7 @@ function ProductCard({ product, index, onOpen }) {
           </div>
         </div>
       </div>
-    </a>
+    </Tag>
   )
 }
 

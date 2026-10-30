@@ -6,7 +6,7 @@ import ProductPage from './components/ProductPage.jsx'
 
 export default function App() {
   const [route, go] = useRoute()
-  const product = PRODUCTS.find((p) => p.id === route)
+  const product = PRODUCTS.find((p) => p.id === route && !p.soon)
 
   useEffect(() => {
     window.scrollTo(0, 0)

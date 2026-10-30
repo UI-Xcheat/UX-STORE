@@ -36,6 +36,13 @@ export default function ProductPage({ product, onBack }) {
           <div className="in price">
             <h3>Escoge tu licencia</h3>
             <p>Al elegir una, se abre la ventana con los métodos de pago.</p>
+            {product.perks && (
+              <ul className="perks">
+                {product.perks.map((x) => (
+                  <li key={x}>{x}</li>
+                ))}
+              </ul>
+            )}
             {PLANS.map((label, k) => (
               <button key={label} type="button" className="plan" onClick={() => setPlan(k)}>
                 <span>{label}</span>

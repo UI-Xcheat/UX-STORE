@@ -7,7 +7,7 @@ export const PLANS = ['1 día', '7 días', '1 mes', '3 meses']
 export const PRODUCTS = [
   {
     id: 'external',
-    name: 'UX External Aim',
+    name: 'UX External',
     badge: 'SAFE',
     banner: bannerExternal,
     short: 'Mueve el mouse a través de una consola. Bypass totalmente externo. Máxima fluidez y seguridad para tus partidas.',
@@ -21,7 +21,9 @@ export const PRODUCTS = [
       'Control de recoil adaptable',
       'Sin inyecciones a la memoria del juego',
     ],
-    prices: [3, 10, 20, 45],
+    prices: [3, 7, 12, 38],
+    stock: true,
+    perks: ['Entrega automática', 'Activación rápida', 'Stock ilimitado'],
   },
   {
     id: 'legit',
@@ -39,7 +41,9 @@ export const PRODUCTS = [
       'Posición de las líneas',
       'ESP Max Distance hasta 200.0 metros',
     ],
-    prices: [3.5, 12, 25, 55],
+    prices: [1.87, 3.74, 10.29, 28.06],
+    stock: true,
+    perks: ['Entrega automática', 'Activación rápida', 'Stock ilimitado'],
   },
   {
     id: 'radar',
@@ -55,6 +59,7 @@ export const PRODUCTS = [
       'Tiempo real, sin alterar tu cliente de juego',
     ],
     prices: [2, 7, 15, 30],
+    soon: true,
   },
   {
     id: 'spoofer',
@@ -70,6 +75,7 @@ export const PRODUCTS = [
       'Para volver a jugar tras una suspensión de hardware',
     ],
     prices: [4, 15, 30, 65],
+    soon: true,
   },
 ]
 

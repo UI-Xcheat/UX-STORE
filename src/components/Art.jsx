@@ -11,6 +11,7 @@ export default function Art({ product, index = 0, children }) {
         <img className="bn" src={product.banner} alt={product.name} />
       )}
       <span className="tag">{product.badge}</span>
+      {product.soon && <span className="soon">EN DESARROLLO</span>}
       {children}
     </div>
   )
