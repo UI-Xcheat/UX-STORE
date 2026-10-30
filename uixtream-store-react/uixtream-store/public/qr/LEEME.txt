@@ -1,0 +1,3 @@
+Pon aquí tus códigos QR con estos nombres:
+yape.png  plin.png  nequi.png  binance.png
+(Si falta alguno, la tienda muestra "QR pendiente".)
