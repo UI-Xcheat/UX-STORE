@@ -1,4 +1,4 @@
-// Cloudflare Worker: recibe el comprobante desde la web y lo publica en #tickets.
+﻿// Cloudflare Worker: recibe el comprobante desde la web y lo publica en #tickets.
 // Secretos (wrangler secret put DISCORD_WEBHOOK_URL): URL del webhook del canal.
 const ALLOWED_ORIGIN = 'https://ui-xcheat.github.io'
 const MAX_BYTES = 5 * 1024 * 1024
@@ -41,7 +41,12 @@ export default {
     out.set('payload_json', JSON.stringify({ embeds: [embed], allowed_mentions: { parse: [] } }))
     out.set('files[0]', file, 'receipt.png')
 
-    const res = await fetch(env.DISCORD_WEBHOOK_URL, { method: 'POST', body: out })
-    return reply(res.ok ? 200 : 502, res.ok ? 'ok' : 'Discord error')
+    try {
+      const res = await fetch(String(env.DISCORD_WEBHOOK_URL ?? '').trim(), { method: 'POST', body: out })
+      return reply(res.ok ? 200 : 502, res.ok ? 'ok' : `Discord error ${res.status}`)
+    } catch (err) {
+      return reply(500, `Worker error: ${err.message.slice(0, 20)}`)
+    }
   },
 }
+

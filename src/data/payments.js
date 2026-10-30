@@ -1,7 +1,7 @@
-export const DISCORD = 'https://discord.gg/y8Vt3p5sw'
+﻿export const DISCORD = 'https://discord.gg/y8Vt3p5sw'
 
 // URL del Cloudflare Worker (ver worker/README.md). Vacío = formulario oculto.
-export const RECEIPT_ENDPOINT = ''
+export const RECEIPT_ENDPOINT = 'https://ux-store-receipts.uixtream-store.workers.dev'
 
 // type "qr"   → círculo de carga y luego el QR (archivo en public/qr/)
 // type "link" → ventana con botón que abre la página de pago
@@ -14,3 +14,4 @@ export const PAYMENTS = [
   { id: 'paypal', name: 'PayPal', icon: 'PP', type: 'link', url: 'https://paypal.me/YOUR_PAYPAL', amount: true },
   { id: 'card', name: 'Tarjeta de crédito / débito', icon: 'CC', type: 'link', url: 'https://uistalin.gumroad.com/l/lhhsze' },
 ]
+
